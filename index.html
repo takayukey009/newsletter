@@ -5,540 +5,545 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GATE Inc. Newsletter</title>
-    <style>
-        /* Reset & Base */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            color: #333333;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        table {
-            border-spacing: 0;
-            width: 100%;
-        }
-
-        td {
-            padding: 0;
-        }
-
-        img {
-            border: 0;
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Container */
-        .container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Header */
-        .header {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .header-subtitle {
-            font-size: 11px;
-            color: #D4AF37;
-            margin-top: 5px;
-            letter-spacing: 2px;
-            font-weight: 300;
-        }
-
-        /* Section Title - Compact */
-        .section-title {
-            text-align: center;
-            padding: 30px 0 20px;
-            position: relative;
-        }
-
-        .section-title h2 {
-            font-size: 16px;
-            font-weight: bold;
-            margin: 0;
-            display: inline-block;
-            border-bottom: 2px solid #D4AF37;
-            padding-bottom: 8px;
-        }
-
-        /* Grid Layout */
-        .grid-container {
-            padding: 30px 20px 20px;
-            text-align: center;
-            font-size: 0;
-        }
-
-        .grid-item {
-            width: 48%;
-            /* 2 columns */
-            display: inline-block;
-            vertical-align: top;
-            margin-bottom: 30px;
-            text-align: left;
-            box-sizing: border-box;
-            background-color: #fff;
-        }
-
-        .grid-item:nth-child(odd) {
-            margin-right: 4%;
-        }
-
-        .profile-img {
-            width: 100%;
-            aspect-ratio: 1 / 1.2;
-            /* Slightly taller for portrait feel */
-            object-fit: cover;
-            border-radius: 4px;
-            background-color: #ddd;
-            margin-bottom: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .profile-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .profile-name-area {
-            margin-bottom: 8px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-
-        .profile-name {
-            font-size: 15px;
-            font-weight: bold;
-            color: #000;
-            margin: 0;
-        }
-
-        .profile-specs {
-            font-size: 10px;
-            color: #666;
-            margin-left: 5px;
-            font-weight: normal;
-        }
-
-        /* Structured Info List */
-        .info-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .info-list li {
-            font-size: 10px;
-            line-height: 1.5;
-            margin-bottom: 6px;
-            color: #444;
-            display: flex;
-        }
-
-        .label {
-            width: 65px;
-            flex-shrink: 0;
-            font-weight: bold;
-            color: #888;
-            font-size: 9px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .val {
-            flex-grow: 1;
-        }
-
-        .val-schedule {
-            color: #b71c1c;
-            font-weight: bold;
-        }
-
-        .btn-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 12px;
-            gap: 8px;
-        }
-
-        .profile-btn {
-            flex: 1;
-            display: block;
-            text-align: center;
-            background-color: #f0f0f0;
-            color: #333;
-            text-decoration: none;
-            font-size: 10px;
-            padding: 8px 0;
-            border-radius: 2px;
-            font-weight: bold;
-            transition: background 0.2s;
-            white-space: nowrap;
-        }
-
-        .profile-btn:hover {
-            background-color: #e0e0e0;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #1a1a1a;
-            color: #888;
-            padding: 30px 20px;
-            text-align: center;
-            font-size: 11px;
-        }
-
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 8px;
-            font-size: 10px;
-        }
-
-        .footer p {
-            margin-top: 20px;
-            font-size: 10px;
-            color: #555;
-        }
-
-        /* Mobile Optimization */
-        @media screen and (max-width: 480px) {
-            .grid-item {
-                width: 100% !important;
-                display: block !important;
-                margin-right: 0 !important;
-                margin-bottom: 30px !important;
-            }
-
-            .profile-name {
-                font-size: 18px;
-            }
-
-            .info-list li {
-                font-size: 12px;
-            }
-
-            .profile-btn {
-                padding: 12px 0;
-                font-size: 12px;
-            }
-        }
-    </style>
 </head>
 
-<body>
+<body
+    style="margin:0;padding:0;background-color:#f4f4f4;font-family:'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,sans-serif;color:#333333;line-height:1.6;">
 
-    <div class="container">
-        <p style="text-align: left; margin-bottom: 20px;">To: _c0_様</p>
-        <!-- Header -->
-        <div class="header">
-            <h1>GATE</h1>
-            <div class="header-subtitle">GATE NEXT GENERATION | VOL.1</div>
-        </div>
+    <!-- Outer wrapper -->
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f4f4;">
+        <tr>
+            <td align="center" style="padding:20px 0;">
 
+                <!-- Main container 600px -->
+                <table width="600" cellpadding="0" cellspacing="0" border="0"
+                    style="background-color:#ffffff;max-width:600px;width:100%;">
 
-        <!-- Grid -->
-        <div class="grid-container">
+                    <!-- Name insertion -->
+                    <tr>
+                        <td style="padding:15px 20px 0;text-align:left;font-size:14px;">To: _c0_様</td>
+                    </tr>
 
-            <!-- Talent 1: Haruka Kudo -->
-            <div class="grid-item">
-                <div class="profile-img">
-                    <img src="https://takayukey009.github.io/newsletter/image/%E5%B7%A5%E8%97%A4%E9%81%A5.jpg" alt="工藤遥">
-                </div>
-                <div class="profile-name-area">
-                    <h3 class="profile-name">工藤 遥<span class="profile-specs">26歳 / 161cm</span></h3>
-                </div>
-                <ul class="info-list">
-                    <li>
-                        <span class="label">Schedule</span>
-                        <span class="val val-schedule"
-                            style="font-size: 14px; background-color: #ffcdd2; padding: 2px 6px; border-radius: 2px;">４月以降、スケジュール調整可能です</span>
-                    </li>
-                    <li>
-                        <span class="label">Character</span>
-                        <span class="val">正統派なルックスと憂いのある表情</span>
-                    </li>
-                    <li>
-                        <span class="label">Appeal</span>
-                        <span class="val">元モーニング娘。SNSフォロワー計37万人</span>
-                    </li>
-                    <li>
-                        <span class="label">Latest</span>
-                        <span class="val">♦︎映画「この夏の星を見る」飯塚花楓役<br>♦︎日10ドラマ「こんばんは、朝山家です。」小向佐知役</span>
-                    </li>
-                </ul>
-                <div class="btn-container">
-                    <a href="https://drive.google.com/file/d/1A4nLu2B0e_FRIWZCANbWXeQ3xnOj6aSA/view?usp=sharing"
-                        target="_blank" class="profile-btn">プロフィール資料</a>
-                    <a href="https://www.youtube.com/watch?v=Bo3RlE8HV4s" target="_blank" class="profile-btn">映像資料</a>
-                </div>
-            </div>
+                    <!-- Header -->
+                    <tr>
+                        <td style="background-color:#000000;color:#ffffff;padding:30px 20px;text-align:center;">
+                            <h1
+                                style="margin:0;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ffffff;">
+                                GATE</h1>
+                            <div
+                                style="font-size:11px;color:#D4AF37;margin-top:5px;letter-spacing:2px;font-weight:300;">
+                                GATE NEXT GENERATION | VOL.1</div>
+                        </td>
+                    </tr>
 
-            <!-- Talent 2: Satoshi Nakatsuka -->
-            <div class="grid-item">
-                <div class="profile-img">
-                    <img src="https://takayukey009.github.io/newsletter/image/%E4%B8%AD%E5%A1%9A%E6%99%BA2.jpg" alt="中塚智">
-                </div>
-                <div class="profile-name-area">
-                    <h3 class="profile-name">中塚 智<span class="profile-specs">27歳 / 176cm</span></h3>
-                </div>
-                <ul class="info-list">
-                    <li>
-                        <span class="label">Schedule</span>
-                        <span class="val val-schedule"
-                            style="font-size: 14px; background-color: #ffcdd2; padding: 2px 6px; border-radius: 2px;">２月、３月、調整できます。４月以降、空いております</span>
-                    </li>
-                    <li>
-                        <span class="label">Character</span>
-                        <span class="val">硬軟自在の演技派</span>
-                    </li>
-                    <li>
-                        <span class="label">Appeal</span>
-                        <span class="val">正統派のプリンスから、クセの強い悪役、そして愛されキャラまで</span>
-                    </li>
-                    <li>
-                        <span class="label">Latest</span>
-                        <span class="val"
-                            style="font-weight: bold; background-color: #fff9c4; padding: 2px 6px; border-radius: 2px;">「教場
-                            Reunion／Requiem」出演中</span>
-                    </li>
-                </ul>
-                <div class="btn-container">
-                    <a href="https://drive.google.com/file/d/1DRtneDwAB9J4i0BGkUZjMJMnTxg0zv5G/view?usp=sharing"
-                        target="_blank" class="profile-btn">プロフィール資料</a>
-                    <a href="https://youtu.be/SJg9HwIykT8?si=-PfWBFrKYkRcRcrn" target="_blank"
-                        class="profile-btn">映像資料</a>
-                </div>
-            </div>
+                    <!-- Talent Grid -->
+                    <tr>
+                        <td style="padding:30px 20px 20px;">
 
-            <!-- Talent 3: Kiwa Tanaka -->
-            <div class="grid-item">
-                <div class="profile-img">
-                    <img src="https://takayukey009.github.io/newsletter/image/%E7%94%B0%E4%B8%AD%E5%B8%8C%E5%92%8C2.jpg" alt="田中希和">
-                </div>
-                <div class="profile-name-area">
-                    <h3 class="profile-name">田中 希和<span class="profile-specs">18歳 / 159cm</span></h3>
-                </div>
-                <ul class="info-list">
-                    <li>
-                        <span class="label">Schedule</span>
-                        <span class="val val-schedule"
-                            style="font-size: 14px; background-color: #ffcdd2; padding: 2px 6px; border-radius: 2px;">２月、３月、調整できます。セリフ１言でもお声がけください</span>
-                    </li>
-                    <li>
-                        <span class="label">Character</span>
-                        <span class="val">とにかく真面目に粘り強く</span>
-                    </li>
-                    <li>
-                        <span class="label">Appeal</span>
-                        <span class="val">透明感が高く、優等生役などが特に合います</span>
-                    </li>
-                    <li>
-                        <span class="label">Latest</span>
-                        <span class="val"
-                            style="font-weight: bold; background-color: #fff9c4; padding: 2px 6px; border-radius: 2px;">大河ドラマ「豊臣兄弟」、日経新聞ブランドムービー</span>
-                    </li>
-                </ul>
-                <div class="btn-container">
-                    <a href="https://drive.google.com/file/d/1uVuqqejgfprq-0WKPs8YXxtdc1OBa_OL/view?usp=sharing"
-                        target="_blank" class="profile-btn">プロフィール資料</a>
-                    <a href="https://www.youtube.com/watch?si=jGiPiCWQU6JwsNu&v=RbYeq0Ja-mE&feature=youtu.be"
-                        target="_blank" class="profile-btn">映像資料</a>
-                </div>
-            </div>
+                            <!-- Row 1: Talent 1 & 2 -->
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <!-- Talent 1: Haruka Kudo -->
+                                    <td width="48%" valign="top" style="padding-right:2%;">
+                                        <img src="https://takayukey009.github.io/newsletter/image/%E5%B7%A5%E8%97%A4%E9%81%A5.jpg"
+                                            alt="工藤遥" width="260"
+                                            style="width:100%;height:auto;display:block;border-radius:4px;">
+                                        <div style="margin:10px 0 8px;border-bottom:1px solid #eee;padding-bottom:5px;">
+                                            <span style="font-size:15px;font-weight:bold;color:#000;">工藤 遥</span>
+                                            <span style="font-size:10px;color:#666;margin-left:5px;">26歳 / 161cm</span>
+                                        </div>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Schedule</td>
+                                                <td
+                                                    style="font-size:14px;color:#b71c1c;font-weight:bold;background-color:#ffcdd2;padding:2px 6px;border-radius:2px;vertical-align:top;padding-bottom:6px;">
+                                                    ４月以降、スケジュール調整可能です</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Character</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    正統派なルックスと憂いのある表情</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Appeal</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    元モーニング娘。SNSフォロワー計37万人</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Latest</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    ♦︎映画「この夏の星を見る」飯塚花楓役<br>♦︎日10ドラマ「こんばんは、朝山家です。」小向佐知役</td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="margin-top:12px;">
+                                            <tr>
+                                                <td width="49%" style="padding-right:2%;"><a
+                                                        href="https://drive.google.com/file/d/1A4nLu2B0e_FRIWZCANbWXeQ3xnOj6aSA/view?usp=sharing"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">プロフィール資料</a>
+                                                </td>
+                                                <td width="49%"><a href="https://www.youtube.com/watch?v=Bo3RlE8HV4s"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">映像資料</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
 
-            <!-- Talent 4: Ayana Taniguchi -->
-            <div class="grid-item">
-                <div class="profile-img">
-                    <img src="https://takayukey009.github.io/newsletter/image/%E8%B0%B7%E5%8F%A3%E5%BD%A9%E8%8F%9C.jpg" alt="谷口彩菜">
-                </div>
-                <div class="profile-name-area">
-                    <h3 class="profile-name">谷口 彩菜<span class="profile-specs">26歳 / 162cm</span></h3>
-                </div>
-                <ul class="info-list">
-                    <li>
-                        <span class="label">Schedule</span>
-                        <span class="val val-schedule"
-                            style="font-size: 14px; background-color: #ffcdd2; padding: 2px 6px; border-radius: 2px;">3月以降、レギュラー出演可能</span>
-                    </li>
-                    <li>
-                        <span class="label">Character</span>
-                        <span class="val">天真爛漫・愛されキャラ</span>
-                    </li>
-                    <li>
-                        <span class="label">Appeal</span>
-                        <span class="val">SNS総フォロワー数28万人</span>
-                    </li>
-                    <li>
-                        <span class="label">Latest</span>
-                        <span class="val">東京彼女（主演）３月公開予定、ヤングジャンプセンターグラビア</span>
-                    </li>
-                </ul>
-                <div class="btn-container">
-                    <a href="https://drive.google.com/file/d/1Dql3z_AcSo_QkGaMyeMSttGNeWf000xP/view?usp=sharing"
-                        target="_blank" class="profile-btn">プロフィール資料</a>
-                    <a href="https://www.instagram.com/reel/DQRIBmxkUcP/" target="_blank" class="profile-btn">映像資料</a>
-                </div>
-            </div>
+                                    <!-- Talent 2: Satoshi Nakatsuka -->
+                                    <td width="48%" valign="top" style="padding-left:2%;">
+                                        <img src="https://takayukey009.github.io/newsletter/image/%E4%B8%AD%E5%A1%9A%E6%99%BA2.jpg"
+                                            alt="中塚智" width="260"
+                                            style="width:100%;height:auto;display:block;border-radius:4px;">
+                                        <div style="margin:10px 0 8px;border-bottom:1px solid #eee;padding-bottom:5px;">
+                                            <span style="font-size:15px;font-weight:bold;color:#000;">中塚 智</span>
+                                            <span style="font-size:10px;color:#666;margin-left:5px;">27歳 / 176cm</span>
+                                        </div>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Schedule</td>
+                                                <td
+                                                    style="font-size:14px;color:#b71c1c;font-weight:bold;background-color:#ffcdd2;padding:2px 6px;border-radius:2px;vertical-align:top;padding-bottom:6px;">
+                                                    ２月、３月、調整できます。４月以降、空いております</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Character</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    硬軟自在の演技派</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Appeal</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    正統派のプリンスから、クセの強い悪役、そして愛されキャラまで</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Latest</td>
+                                                <td
+                                                    style="font-size:10px;font-weight:bold;background-color:#fff9c4;padding:2px 6px;border-radius:2px;vertical-align:top;padding-bottom:6px;">
+                                                    「教場 Reunion／Requiem」出演中</td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="margin-top:12px;">
+                                            <tr>
+                                                <td width="49%" style="padding-right:2%;"><a
+                                                        href="https://drive.google.com/file/d/1DRtneDwAB9J4i0BGkUZjMJMnTxg0zv5G/view?usp=sharing"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">プロフィール資料</a>
+                                                </td>
+                                                <td width="49%"><a
+                                                        href="https://youtu.be/SJg9HwIykT8?si=-PfWBFrKYkRcRcrn"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">映像資料</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
 
-            <!-- Talent 5: Ryo Igarashi -->
-            <div class="grid-item">
-                <div class="profile-img">
-                    <img src="https://takayukey009.github.io/newsletter/image/%E4%BA%94%E5%8D%81%E5%B5%90%E8%AB%92jpeg.jpeg" alt="五十嵐諒">
-                </div>
-                <div class="profile-name-area">
-                    <h3 class="profile-name">五十嵐 諒<span class="profile-specs">33歳 / 171cm</span></h3>
-                </div>
-                <ul class="info-list">
-                    <li>
-                        <span class="label">Schedule</span>
-                        <span class="val val-schedule"
-                            style="font-size: 14px; background-color: #fff9c4; padding: 2px 6px; border-radius: 2px;">3月以降、スケジュールお渡しできます</span>
-                    </li>
-                    <li>
-                        <span class="label">Character</span>
-                        <span class="val">知的な佇まいと柔らかな物腰</span>
-                    </li>
-                    <li>
-                        <span class="label">Appeal</span>
-                        <span class="val">CM、ドラマでの父親役や会社員役にも最適</span>
-                    </li>
-                    <li>
-                        <span class="label">Latest</span>
-                        <span class="val">日テレ「冬のなんかさ、春のなんかね」、映画「3月11日」主演</span>
-                    </li>
-                </ul>
-                <div class="btn-container">
-                    <a href="https://drive.google.com/file/d/1DJWoxS6yMokB9WViJolABAxdiDtcaJgu/view?usp=drive_link"
-                        target="_blank" class="profile-btn">プロフィール資料</a>
-                    <a href="https://youtu.be/yJ5Z-ekY5Go?si=BL_PxDkSUkQgFIeR" target="_blank"
-                        class="profile-btn">映像資料</a>
-                </div>
-            </div>
+                            <!-- Spacer -->
+                            <div style="height:30px;"></div>
 
-            <!-- Talent 6: Wakana Shimada -->
-            <div class="grid-item">
-                <div class="profile-img">
-                    <img src="https://takayukey009.github.io/newsletter/image/%E5%B3%B6%E7%94%B0%E5%92%8C%E5%A5%8F.jpg" alt="島田和奏">
-                </div>
-                <div class="profile-name-area">
-                    <h3 class="profile-name">島田 和奏<span class="profile-specs">26歳 / 161cm</span></h3>
-                </div>
-                <ul class="info-list">
-                    <li>
-                        <span class="label">Schedule</span>
-                        <span class="val val-schedule"
-                            style="font-size: 14px; background-color: #fff9c4; padding: 2px 6px; border-radius: 2px;">3月〜
-                            スケジュール調整可能</span>
-                    </li>
-                    <li>
-                        <span class="label">Character</span>
-                        <span class="val">明るく親しみやすい雰囲気</span>
-                    </li>
-                    <li>
-                        <span class="label">Appeal</span>
-                        <span class="val">自然体な芝居を得意とし、広告イメージにマッチします</span>
-                    </li>
-                    <li>
-                        <span class="label">Latest</span>
-                        <span class="val">舞台「ショービズは難しい••••••!?」主演、「東京彼氏」出演</span>
-                    </li>
-                </ul>
-                <div class="btn-container">
-                    <a href="https://drive.google.com/file/d/1l-_GoJ0CTzMjOWeliQo4BHjsM6WlvhaA/view?usp=sharing"
-                        target="_blank" class="profile-btn">プロフィール資料</a>
-                    <a href="https://www.youtube.com/watch?si=HPu2ZWD3X6lj7uXs&v=X_RS0SwuSDs&feature=youtu.be"
-                        target="_blank" class="profile-btn">映像資料</a>
-                </div>
-            </div>
+                            <!-- Row 2: Talent 3 & 4 -->
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <!-- Talent 3: Kiwa Tanaka -->
+                                    <td width="48%" valign="top" style="padding-right:2%;">
+                                        <img src="https://takayukey009.github.io/newsletter/image/%E7%94%B0%E4%B8%AD%E5%B8%8C%E5%92%8C2.jpg"
+                                            alt="田中希和" width="260"
+                                            style="width:100%;height:auto;display:block;border-radius:4px;">
+                                        <div style="margin:10px 0 8px;border-bottom:1px solid #eee;padding-bottom:5px;">
+                                            <span style="font-size:15px;font-weight:bold;color:#000;">田中 希和</span>
+                                            <span style="font-size:10px;color:#666;margin-left:5px;">18歳 / 159cm</span>
+                                        </div>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Schedule</td>
+                                                <td
+                                                    style="font-size:14px;color:#b71c1c;font-weight:bold;background-color:#ffcdd2;padding:2px 6px;border-radius:2px;vertical-align:top;padding-bottom:6px;">
+                                                    ２月、３月、調整できます。セリフ１言でもお声がけください</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Character</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    とにかく真面目に粘り強く</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Appeal</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    透明感が高く、優等生役などが特に合います</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Latest</td>
+                                                <td
+                                                    style="font-size:10px;font-weight:bold;background-color:#fff9c4;padding:2px 6px;border-radius:2px;vertical-align:top;padding-bottom:6px;">
+                                                    大河ドラマ「豊臣兄弟」、日経新聞ブランドムービー</td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="margin-top:12px;">
+                                            <tr>
+                                                <td width="49%" style="padding-right:2%;"><a
+                                                        href="https://drive.google.com/file/d/1uVuqqejgfprq-0WKPs8YXxtdc1OBa_OL/view?usp=sharing"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">プロフィール資料</a>
+                                                </td>
+                                                <td width="49%"><a
+                                                        href="https://www.youtube.com/watch?si=jGiPiCWQU6JwsNu&v=RbYeq0Ja-mE&feature=youtu.be"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">映像資料</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
 
+                                    <!-- Talent 4: Ayana Taniguchi -->
+                                    <td width="48%" valign="top" style="padding-left:2%;">
+                                        <img src="https://takayukey009.github.io/newsletter/image/%E8%B0%B7%E5%8F%A3%E5%BD%A9%E8%8F%9C.jpg"
+                                            alt="谷口彩菜" width="260"
+                                            style="width:100%;height:auto;display:block;border-radius:4px;">
+                                        <div style="margin:10px 0 8px;border-bottom:1px solid #eee;padding-bottom:5px;">
+                                            <span style="font-size:15px;font-weight:bold;color:#000;">谷口 彩菜</span>
+                                            <span style="font-size:10px;color:#666;margin-left:5px;">26歳 / 162cm</span>
+                                        </div>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Schedule</td>
+                                                <td
+                                                    style="font-size:14px;color:#b71c1c;font-weight:bold;background-color:#ffcdd2;padding:2px 6px;border-radius:2px;vertical-align:top;padding-bottom:6px;">
+                                                    3月以降、レギュラー出演可能</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Character</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    天真爛漫・愛されキャラ</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Appeal</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    SNS総フォロワー数28万人</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Latest</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    東京彼女（主演）３月公開予定、ヤングジャンプセンターグラビア</td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="margin-top:12px;">
+                                            <tr>
+                                                <td width="49%" style="padding-right:2%;"><a
+                                                        href="https://drive.google.com/file/d/1Dql3z_AcSo_QkGaMyeMSttGNeWf000xP/view?usp=sharing"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">プロフィール資料</a>
+                                                </td>
+                                                <td width="49%"><a href="https://www.instagram.com/reel/DQRIBmxkUcP/"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">映像資料</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
 
+                            <!-- Spacer -->
+                            <div style="height:30px;"></div>
 
-            <!-- Talent 11: Kai Shishido -->
-            <div class="grid-item">
-                <div class="profile-img">
-                    <img src="https://takayukey009.github.io/newsletter/image/%E5%AE%8D%E6%88%B8%E9%96%8B.jpg" alt="宍戸開">
-                </div>
-                <div class="profile-name-area">
-                    <h3 class="profile-name">宍戸 開<span class="profile-specs">59歳 / 180cm</span></h3>
-                </div>
-                <ul class="info-list">
-                    <li>
-                        <span class="label">Schedule</span>
-                        <span class="val val-schedule"
-                            style="font-size: 14px; background-color: #fff9c4; padding: 2px 6px; border-radius: 2px;">案件ごとに調整可能です</span>
-                    </li>
-                    <li>
-                        <span class="label">Character</span>
-                        <span class="val">圧倒的な存在感とダンディな佇まい</span>
-                    </li>
-                    <li>
-                        <span class="label">Appeal</span>
-                        <span class="val">ベテランならではの安定感と説得力のある演技</span>
-                    </li>
-                    <li>
-                        <span class="label">Latest</span>
-                        <span class="val">EX「ニッポンめしあがれ」レギュラー出演中、EX「緊急取調室」出演</span>
-                    </li>
-                </ul>
-                <div class="btn-container">
-                    <a href="https://drive.google.com/file/d/1CTjjxyORJ8lEt9HXPy1JXyOkqhmUBdVZ/view?usp=drive_link"
-                        target="_blank" class="profile-btn">プロフィール資料</a>
-                    <a href="https://www.youtube.com/watch?v=nh-KsCxP7HQ" target="_blank" class="profile-btn">映像資料</a>
-                </div>
-            </div>
+                            <!-- Row 3: Talent 5 & 6 -->
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <!-- Talent 5: Ryo Igarashi -->
+                                    <td width="48%" valign="top" style="padding-right:2%;">
+                                        <img src="https://takayukey009.github.io/newsletter/image/%E4%BA%94%E5%8D%81%E5%B5%90%E8%AB%92jpeg.jpeg"
+                                            alt="五十嵐諒" width="260"
+                                            style="width:100%;height:auto;display:block;border-radius:4px;">
+                                        <div style="margin:10px 0 8px;border-bottom:1px solid #eee;padding-bottom:5px;">
+                                            <span style="font-size:15px;font-weight:bold;color:#000;">五十嵐 諒</span>
+                                            <span style="font-size:10px;color:#666;margin-left:5px;">33歳 / 171cm</span>
+                                        </div>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Schedule</td>
+                                                <td
+                                                    style="font-size:14px;color:#b71c1c;font-weight:bold;background-color:#fff9c4;padding:2px 6px;border-radius:2px;vertical-align:top;padding-bottom:6px;">
+                                                    3月以降、スケジュールお渡しできます</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Character</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    知的な佇まいと柔らかな物腰</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Appeal</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    CM、ドラマでの父親役や会社員役にも最適</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Latest</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    日テレ「冬のなんかさ、春のなんかね」、映画「3月11日」主演</td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="margin-top:12px;">
+                                            <tr>
+                                                <td width="49%" style="padding-right:2%;"><a
+                                                        href="https://drive.google.com/file/d/1DJWoxS6yMokB9WViJolABAxdiDtcaJgu/view?usp=drive_link"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">プロフィール資料</a>
+                                                </td>
+                                                <td width="49%"><a
+                                                        href="https://youtu.be/yJ5Z-ekY5Go?si=BL_PxDkSUkQgFIeR"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">映像資料</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
 
-        </div>
+                                    <!-- Talent 6: Wakana Shimada -->
+                                    <td width="48%" valign="top" style="padding-left:2%;">
+                                        <img src="https://takayukey009.github.io/newsletter/image/%E5%B3%B6%E7%94%B0%E5%92%8C%E5%A5%8F.jpg"
+                                            alt="島田和奏" width="260"
+                                            style="width:100%;height:auto;display:block;border-radius:4px;">
+                                        <div style="margin:10px 0 8px;border-bottom:1px solid #eee;padding-bottom:5px;">
+                                            <span style="font-size:15px;font-weight:bold;color:#000;">島田 和奏</span>
+                                            <span style="font-size:10px;color:#666;margin-left:5px;">26歳 / 161cm</span>
+                                        </div>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Schedule</td>
+                                                <td
+                                                    style="font-size:14px;color:#b71c1c;font-weight:bold;background-color:#fff9c4;padding:2px 6px;border-radius:2px;vertical-align:top;padding-bottom:6px;">
+                                                    3月〜 スケジュール調整可能</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Character</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    明るく親しみやすい雰囲気</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Appeal</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    自然体な芝居を得意とし、広告イメージにマッチします</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Latest</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    舞台「ショービズは難しい••••••!?」主演、「東京彼氏」出演</td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="margin-top:12px;">
+                                            <tr>
+                                                <td width="49%" style="padding-right:2%;"><a
+                                                        href="https://drive.google.com/file/d/1l-_GoJ0CTzMjOWeliQo4BHjsM6WlvhaA/view?usp=sharing"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">プロフィール資料</a>
+                                                </td>
+                                                <td width="49%"><a
+                                                        href="https://www.youtube.com/watch?si=HPu2ZWD3X6lj7uXs&v=X_RS0SwuSDs&feature=youtu.be"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">映像資料</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
 
-        <!-- Booking Section -->
-        <div class="section-title" style="padding-top: 10px;">
-            <h2>BOOKING INFO</h2>
-        </div>
-        <div style="background-color: #f8f8f8; padding: 30px 20px; text-align: center; margin-bottom: 40px;">
-            <p
-                style="font-size: 14px; color: #555; line-height: 1.8; text-align: left; max-width: 500px; margin: 0 auto 30px;">
-                平素より格別のご高配を賜り、厚く御礼申し上げます。<br>
-                上記俳優を含め、GATE所属の若手俳優について、現在3月・4月のスケジュール調整が大変しやすくなっております。<br><br>
-                ドラマ・映画のキャスティングをはじめ、CM・広告出演など、
-                「急な案件でキャストが決まらない」「～な人材を探している」等、お困りの際はぜひ一度ご相談ください。<br>
-            </p>
-            <a href="https://gateagency.jp/contact/request/" class="btn"
-                style="padding: 15px 40px; font-size: 14px; background-color: #000; border: none; color: white; letter-spacing: 1px;">お問い合わせ・資料請求はこちら</a>
-        </div>
+                            <!-- Spacer -->
+                            <div style="height:30px;"></div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="social-links" style="margin-top: 20px;">
-                <a href="https://gateagency.jp/" target="_blank">OFFICIAL SITE</a>
-                <a href="https://www.instagram.com/gate_talentagency" target="_blank">INSTAGRAM</a>
-                <a href="https://x.com/GATE__tobira" target="_blank">X (TWITTER)</a>
-            </div>
-            <p style="margin-top: 30px;">&copy; 2026 GATE Inc. All Rights Reserved.</p>
-        </div>
-    </div>
+                            <!-- Row 4: Talent 7 (single, centered) -->
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <!-- Talent 7: Kai Shishido -->
+                                    <td width="48%" valign="top" style="padding-right:2%;">
+                                        <img src="https://takayukey009.github.io/newsletter/image/%E5%AE%8D%E6%88%B8%E9%96%8B.jpg"
+                                            alt="宍戸開" width="260"
+                                            style="width:100%;height:auto;display:block;border-radius:4px;">
+                                        <div style="margin:10px 0 8px;border-bottom:1px solid #eee;padding-bottom:5px;">
+                                            <span style="font-size:15px;font-weight:bold;color:#000;">宍戸 開</span>
+                                            <span style="font-size:10px;color:#666;margin-left:5px;">59歳 / 180cm</span>
+                                        </div>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Schedule</td>
+                                                <td
+                                                    style="font-size:14px;color:#b71c1c;font-weight:bold;background-color:#fff9c4;padding:2px 6px;border-radius:2px;vertical-align:top;padding-bottom:6px;">
+                                                    案件ごとに調整可能です</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Character</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    圧倒的な存在感とダンディな佇まい</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Appeal</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    ベテランならではの安定感と説得力のある演技</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="65"
+                                                    style="font-size:9px;font-weight:bold;color:#888;text-transform:uppercase;letter-spacing:0.5px;vertical-align:top;padding-bottom:6px;">
+                                                    Latest</td>
+                                                <td
+                                                    style="font-size:10px;color:#444;vertical-align:top;padding-bottom:6px;">
+                                                    EX「ニッポンめしあがれ」レギュラー出演中、EX「緊急取調室」出演</td>
+                                            </tr>
+                                        </table>
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                                            style="margin-top:12px;">
+                                            <tr>
+                                                <td width="49%" style="padding-right:2%;"><a
+                                                        href="https://drive.google.com/file/d/1CTjjxyORJ8lEt9HXPy1JXyOkqhmUBdVZ/view?usp=drive_link"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">プロフィール資料</a>
+                                                </td>
+                                                <td width="49%"><a href="https://www.youtube.com/watch?v=nh-KsCxP7HQ"
+                                                        target="_blank"
+                                                        style="display:block;text-align:center;background-color:#f0f0f0;color:#333;text-decoration:none;font-size:10px;padding:8px 0;border-radius:2px;font-weight:bold;">映像資料</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="48%" valign="top" style="padding-left:2%;"></td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <!-- Booking Section -->
+                    <tr>
+                        <td style="text-align:center;padding:10px 0 20px;">
+                            <h2
+                                style="font-size:16px;font-weight:bold;margin:0;display:inline-block;border-bottom:2px solid #D4AF37;padding-bottom:8px;">
+                                BOOKING INFO</h2>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="background-color:#f8f8f8;padding:30px 20px;text-align:center;">
+                            <p
+                                style="font-size:14px;color:#555;line-height:1.8;text-align:left;max-width:500px;margin:0 auto 30px;">
+                                平素より格別のご高配を賜り、厚く御礼申し上げます。<br>
+                                上記俳優を含め、GATE所属の若手俳優について、現在3月・4月のスケジュール調整が大変しやすくなっております。<br><br>
+                                ドラマ・映画のキャスティングをはじめ、CM・広告出演など、
+                                「急な案件でキャストが決まらない」「～な人材を探している」等、お困りの際はぜひ一度ご相談ください。<br>
+                            </p>
+                            <a href="https://gateagency.jp/contact/request/"
+                                style="display:inline-block;padding:15px 40px;font-size:14px;background-color:#000;color:#ffffff;text-decoration:none;letter-spacing:1px;">お問い合わせ・資料請求はこちら</a>
+                        </td>
+                    </tr>
+
+                    <!-- Spacer -->
+                    <tr>
+                        <td style="height:40px;"></td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td
+                            style="background-color:#1a1a1a;color:#888;padding:30px 20px;text-align:center;font-size:11px;">
+                            <div style="margin-top:20px;">
+                                <a href="https://gateagency.jp/" target="_blank"
+                                    style="color:#ffffff;text-decoration:none;margin:0 8px;font-size:10px;">OFFICIAL
+                                    SITE</a>
+                                <a href="https://www.instagram.com/gate_talentagency" target="_blank"
+                                    style="color:#ffffff;text-decoration:none;margin:0 8px;font-size:10px;">INSTAGRAM</a>
+                                <a href="https://x.com/GATE__tobira" target="_blank"
+                                    style="color:#ffffff;text-decoration:none;margin:0 8px;font-size:10px;">X
+                                    (TWITTER)</a>
+                            </div>
+                            <p style="margin-top:30px;font-size:10px;color:#555;">&copy; 2026 GATE Inc. All Rights
+                                Reserved.</p>
+                        </td>
+                    </tr>
+
+                </table>
+                <!-- End main container -->
+
+            </td>
+        </tr>
+    </table>
+    <!-- End outer wrapper -->
 
 </body>
 
